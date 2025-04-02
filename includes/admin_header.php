@@ -59,6 +59,17 @@ if (!is_admin()) {
                 <a href="/admin/transactions.php" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-green-700 <?php echo basename($_SERVER['PHP_SELF']) == 'transactions.php' ? 'bg-green-700' : ''; ?>">
                     <i class="fas fa-exchange-alt mr-2"></i>Transactions
                 </a>
+                <div class="group relative">
+                    <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-green-700">
+                        <i class="fas fa-user-cog mr-2"></i>Admin Management
+                        <i class="fas fa-chevron-down float-right mt-1 text-xs"></i>
+                    </a>
+                    <div class="hidden group-hover:block absolute left-0 ml-64 mt-0 w-48 bg-white rounded-md shadow-lg z-10">
+                        <a href="/admin/create_admin.php" class="block px-4 py-2 text-gray-800 hover:bg-green-100">Create Admin</a>
+                        <a href="/admin/update_profile.php" class="block px-4 py-2 text-gray-800 hover:bg-green-100">Update Profile</a>
+                        <a href="/admin/change_password.php" class="block px-4 py-2 text-gray-800 hover:bg-green-100">Change Password</a>
+                    </div>
+                </div>
                 <a href="/logout.php" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-green-700">
                     <i class="fas fa-sign-out-alt mr-2"></i>Logout
                 </a>
